@@ -7,3 +7,10 @@ class FileSerializer(serializers.ModelSerializer):
         model = FileTemplate
         fields = "__all__"
         read_only_fields = ("id",)
+        
+        
+class GenerateFileSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    type = serializers.CharField()
+    
+    
